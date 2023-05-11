@@ -80,7 +80,7 @@ docker-php-ext-configure pdo_oci --with-pdo-oci='instantclient,/opt/oracle/insta
                pdo_oci 
 
 RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
-
+RUN docker-php-ext-install pdo pdo_mysql
 VOLUME /var/www/html
 #ADD . /var/www/html/
 LABEL Description=" Apache 2.4.7 Webserver - PHP 7.3"
