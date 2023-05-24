@@ -6,6 +6,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "80:80"
+    expose:
+      - 9000
     volumes:
       - "[local_files]:/var/www/html"
     tty: true
